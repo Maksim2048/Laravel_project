@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Building;
 use Illuminate\Http\Request;
 use App\Models\Room;
 
@@ -29,7 +30,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        return view('room_create', ['buildings' => Building::all()]);
     }
 
     /**

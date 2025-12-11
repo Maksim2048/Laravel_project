@@ -19,6 +19,7 @@
                 <th>Количество мест</th>
                 <th>Цена</th>
                 <th>Корпус</th>
+                <th>Действия</th>
             </tr>
             </thead>
             <tbody>
@@ -29,6 +30,10 @@
                     <td>{{ $room->beds_count }}</td>
                     <td>{{ $room->price }}</td>
                     <td>{{$room->building->name}}</td>
+                    <td>
+                        <a href="{{url('room/destroy/' .$room->id)}}">Удалить</a>
+                        <a href="{{url('room/edit/' .$room->id)}}">Редактировать</a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

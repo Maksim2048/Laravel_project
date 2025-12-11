@@ -10,6 +10,13 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Room extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'room_number',
+        'price',
+        'beds_count',
+        'building_id'
+    ];
     public function building(): BelongsTo
     {
         return $this->belongsTo(Building::class);

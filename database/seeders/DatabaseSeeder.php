@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         // Потом комнаты
         $this->call(RoomSeeder::class);
-        //в конце проживание
+        //Потом проживание
         $this->call(LivingSeeder::class);
     }
 }
